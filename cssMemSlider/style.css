@@ -1,3 +1,4 @@
+  body{
    background-color: #BBB5B3;
 }
 .slide-content img{
@@ -128,7 +129,8 @@ border-radius: 5%;
    transform: translateX(-270%)
  }
  
-@media (max-width:1040px) {
+
+ @media (max-width:1040px) {
    .text1,
    .text2,
    .text3,
