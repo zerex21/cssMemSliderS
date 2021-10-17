@@ -90,13 +90,13 @@ border-radius: 5%;
    overflow: hidden;
    justify-items: start;
    float: right;
-
-
  }
 
  .context{
      display: flex;
      justify-content: space-between;
+     padding-top: 15px;
+     align-items: baseline;
  }
 
  .text1{
@@ -126,4 +126,37 @@ border-radius: 5%;
  }
  #slide4:checked ~ .context .text4 {
    transform: translateX(-270%)
+ }
+
+ @media (max-width:1040px) {
+   .text1,
+   .text2,
+   .text3,
+   .text4{
+      font-size:  2em;
+   }
+ }
+
+ @media (max-width:790px) {
+   .text1,
+   .text2,
+   .text3,
+   .text4{
+      font-size:  1.5em;
+   }
+   .context{
+      display: flex;
+     flex-direction: column-reverse;
+   }
+   #bullets{
+      margin: 0 auto;
+      padding-bottom: 20px;
+   }
+ }
+
+ @media (max-width:400px) {
+   #bullets label {
+     width: 7px;
+     height: 7px;
+  }
  }
