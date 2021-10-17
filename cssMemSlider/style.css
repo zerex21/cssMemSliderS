@@ -85,40 +85,45 @@ border-radius: 5%;
 
  .text{
      display: flex;
- max-width: 150px;
-/*  overflow: hidden; */
+     max-width: 200px;
+     min-height: 20px;
+   overflow: hidden;
+   justify-items: start;
+   float: right;
+
 
  }
 
  .context{
      display: flex;
      justify-content: space-between;
-
  }
 
-
+ .text1{
+   transition: all .3s ease-in-out;
+   transform: translateX(-90%); 
+ }
  .text1,
  .text2,
  .text3,
  .text4{
-  /*    display: none;
-    transition: display 800ms ; */
-    
- }
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 3em; 
+   transition: all .3s ease-in-out;
+   transform: translateX(-400%);
+}
 
  #slide1:checked ~ .context .text1 {
-/* 
-    display: block; */
+   transform: translateX(0%);
  }
  #slide2:checked ~ .context .text2  {
-  /*   display: block; */
+   transform: translateX(-70%)
  }
  
  #slide3:checked ~ .context .text3 {
-   /*  display: block;
- */
-  
+   transform: translateX(-130%)
  }
  #slide4:checked ~ .context .text4 {
- /*    display: block; */
+   transform: translateX(-270%)
  }
