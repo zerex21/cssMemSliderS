@@ -3,8 +3,8 @@
 }
 .slide-content img{
    width: 100%;
-height:  30vw;
-border-radius: 5%;
+   height:  30vw;
+   border-radius: 5%;
 }
 .slide-content {
     max-width: 50vw;
@@ -27,11 +27,15 @@ border-radius: 5%;
  }
  #slider input[type=radio] {
     display: none;
+    
  }
+
  #slider label {
     cursor:pointer;
-    text-decoration: none;
+    text-decoration: none; 
+  
  }
+
  #slides {
     padding: 1%;
     border: 3px solid #ccc;
@@ -64,42 +68,61 @@ border-radius: 5%;
     width: 25%;
     float:left;
  }
+ #bullets{
+    display: flex;
+ }
 
  #bullets label {
-     border: 3px solid #ccc;
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width:  3.5vw ;
+    height: 3.5vw ;
     border-radius:100%;
-    background: #ccc;
-    margin: 0 2px;
+    margin-right:0.7vw ;
+
  }
- .context #bullets label:hover{
+ #bullets label:nth-child(4){
+    margin-right:0 ;
+ }
+ .slide-inner{
+    margin: 20% auto;
+    width:1.5vw ;
+    height: 1.5vw;
+    border:3px solid #ccc;
+    background-color: #ccc;
+    border-radius: 100%;
+    
+ }
+ .slide-inner:hover{
+   background-color: white;
+}
+#slide3:checked ~ .context #bullets .inner3,
+#slide2:checked ~ .context #bullets .inner2,
+#slide1:checked ~ .context #bullets .inner1,
+#slide4:checked ~ .context #bullets .inner4{
+   background: #444;
+}
+
+ .context #bullets label:hover .slide-inner{
      background-color: white;
      border: 3px solid white;
- }
- #slide2:checked ~ .context #bullets label:nth-child(2),
- #slide3:checked ~ .context #bullets label:nth-child(3),
- #slide1:checked ~ .context #bullets label:nth-child(1),
- #slide4:checked ~ .context #bullets label:nth-child(4) {
-    background: #444;
  }
 
  .text{
      display: flex;
      max-width: 15rem;
+     max-height: 2vw;
    overflow: hidden;
    justify-items: start;
    float: right;
+
  }
 
  .context{
      display: flex;
      justify-content: space-between;
      padding-top: 2%;
-     align-items: baseline;
+     align-items: center ;
  }
-
  .text1{
    transition: all .3s ease-in-out;
    transform: translateX(-90%); 
@@ -110,56 +133,115 @@ border-radius: 5%;
  .text4{
    font-family: 'Times New Roman', Times, serif;
    font-weight: 500;
-   font-size: 3em; 
+   font-size: 1.2em; 
    transition: all .3s ease-in-out;
    transform: translateX(-400%);
 }
 
+.text4{
+   margin-left: -110%;
+  }
  #slide1:checked ~ .context .text1 {
    transform: translateX(0%);
  }
  #slide2:checked ~ .context .text2  {
-   transform: translateX(-70%)
+   transform: translateX(-87%)
  }
  
  #slide3:checked ~ .context .text3 {
-   transform: translateX(-130%)
+   transform: translateX(-153%)
  }
  #slide4:checked ~ .context .text4 {
-   transform: translateX(-270%)
+   transform: translateX(-423%);
+   margin-left: 0%;
  }
  
-
+@media (min-width:1041px) {
+   
+   #slide4:checked ~ .context .text4 {
+      transform: translateX(-290%);    
+    }  
+}
  @media (max-width:1040px) {
    .text1,
    .text2,
    .text3,
    .text4{
-      font-size:  2em;
+      font-size:  0.9em;
    }
+   
+ #bullets label {
+   width:  4vw ;
+   height: 4vw ;
+}
  }
 
  @media (max-width:790px) {
+   #slide4:checked ~ .context .text4 {
+      transform: translateX(-364%);
+      
+    } 
+    #bullets label {
+      width:  4.5vw ;
+      height: 4.5vw ;
+   }
+    .text{
+       max-height: 6vw;
+    }
+   .slide-inner{
+      margin: 17% auto;
+   }
    .text1,
    .text2,
    .text3,
    .text4{
-      font-size:  1.5em;
+      font-size:  1em;
    }
    .context{
       display: flex;
      flex-direction: column-reverse;
+     align-items: baseline;
    }
    #bullets{
       margin: 0 auto;
       padding:4% 0 3% 0;
+     
    }
  }
-
- @media (max-width:400px) {
+@media (max-width:600px) {
    #bullets label {
-     width: 0.75rem;
-     height: 0.75rem;
-  }
+      display: inline-block;
+      width:  5vw ;
+      height: 5vw ;
+   }
+}
+ @media (max-width:490px) {
+   #slide4:checked ~ .context .text4 {
+      transform: translateX(-335%);
+      
+    } 
+ }
+
+ @media (max-width:460px) {
+   #slide4:checked ~ .context .text4 {
+      transform: translateX(-305%);
+      
+    } 
+ }
+ @media (max-width:430px) {
+   #slide4:checked ~ .context .text4 {
+      transform: translateX(-275%);
+      
+    } 
+ }
+ @media (max-width:400px) {
+   .slide-inner{
+      margin: 20% auto;
+   }
+   #bullets label {
+      display: inline-block;
+      width:  6vw ;
+      height: 6vw ;
+   }
  }
  
