@@ -39,7 +39,6 @@
  #slides {
     padding: 1%;
     border: 3px solid #ccc;
-    position: relative;
     z-index: 1;
  }
  #overflow {
